@@ -61,6 +61,9 @@ ENTER   = [\ \n]
 <YYINITIAL> {MAYOR_IGUAL}   { return new Symbol(sym.MAYOR_IGUAL, yyline, yycolumn, null); }
 <YYINITIAL> {MENOR_IGUAL}   { return new Symbol(sym.MENOR_IGUAL, yyline, yycolumn, null); }
 <YYINITIAL> {DIFERENTE}     { return new Symbol(sym.DIFERENTE, yyline, yycolumn, null); }
+<YYINITIAL> {AND}           { return new Symbol(sym.AND, yyline, yycolumn, null); }
+<YYINITIAL> {OR}            { return new Symbol(sym.OR, yyline, yycolumn, null); }
+<YYINITIAL> {NOT}              { return new Symbol(sym.NOT, yyline, yycolumn, null); }
 
 <YYINITIAL> {SPACE}     { /*Espacios en blanco, ignorados*/ }
 <YYINITIAL> {ENTER}     { /*Saltos de linea, ignorados*/}
