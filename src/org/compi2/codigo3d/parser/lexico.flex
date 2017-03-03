@@ -25,6 +25,16 @@ DIV             = "/"
 POT             = "^"
 PAR_IZQ         = "("
 PAR_DER         = ")"
+IGUAL           = "=="
+DIFERENTE       = "!="
+MAYOR_QUE       = ">"
+MENOR_QUE       = "<"
+MAYOR_IGUAL     = ">="
+MENOR_IGUAL     = "<="
+AND             = "&&"
+OR              = "||"
+NOT             = "!"
+
 
 ID              = [A-Za-z][_0-9A-Za-z]*
 ENTERO          = [0-9]+
@@ -45,6 +55,12 @@ ENTER   = [\ \n]
 <YYINITIAL> {POT}	    { return new Symbol(sym.POT, yyline, yycolumn, null); }
 <YYINITIAL> {PAR_IZQ}	    { return new Symbol(sym.PAR_IZQ, yyline, yycolumn, null); }
 <YYINITIAL> {PAR_DER}	    { return new Symbol(sym.PAR_DER, yyline, yycolumn, null); }
+<YYINITIAL> {IGUAL}         { return new Symbol(sym.IGUAL, yyline, yycolumn, null); }
+<YYINITIAL> {MAYOR_QUE}     { return new Symbol(sym.MAYOR_QUE, yyline, yycolumn, null); }
+<YYINITIAL> {MENOR_QUE}     { return new Symbol(sym.MENOR_QUE, yyline, yycolumn, null); }
+<YYINITIAL> {MAYOR_IGUAL}   { return new Symbol(sym.MAYOR_IGUAL, yyline, yycolumn, null); }
+<YYINITIAL> {MENOR_IGUAL}   { return new Symbol(sym.MENOR_IGUAL, yyline, yycolumn, null); }
+<YYINITIAL> {DIFERENTE}     { return new Symbol(sym.DIFERENTE, yyline, yycolumn, null); }
 
 <YYINITIAL> {SPACE}     { /*Espacios en blanco, ignorados*/ }
 <YYINITIAL> {ENTER}     { /*Saltos de linea, ignorados*/}
