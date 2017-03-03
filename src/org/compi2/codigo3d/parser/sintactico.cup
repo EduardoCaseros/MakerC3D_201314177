@@ -27,12 +27,13 @@ terminal TokenC3D MAS, MENOS, MULT, DIV, POT, PAR_IZQ, PAR_DER,MAYOR_QUE,MENOR_Q
 nonterminal NodoC3D inicial, expresion,relacional,logico;
 
 
-precedence left MAS, MENOS;
-precedence left MULT, DIV; 
-precedence right POT; 
 precedence left OR;
 precedence left AND;
 precedence left NOT;
+precedence left MAS, MENOS;
+precedence left MULT, DIV; 
+precedence right POT; 
+
 
 start with inicial;
 
